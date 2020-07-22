@@ -13,38 +13,36 @@ var upperLet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerLet = "abcdefghijklmnopqrstuvwxyz";
 var numbSym = "0123456789";
 var speciSym = "!@#$%^&*()_+{}[];:<>,.?/";
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
-var passLength = prompt("How long would you like your password to be from 8-128?");
-var passUpper = confirm("Would you like Uppercase?");
-var passLower = confirm("Would you like Lowercase?");
+  var passLength = prompt("How long would you like your password to be from 8-128?");
+  var passUpper = confirm("Would you like Uppercase?");
+  var passLower = confirm("Would you like Lowercase?");
 
-var passNumeric = confirm("Would you like numbers?");
-var passSpeci = confirm("Would you like special characters?");
-// += add on the right to the left
-var lookUplist = "";
-if (passUpper === true){
-  lookUplist += upperLet;
-}
-if (passLower === true){
-  lookUplist += lowerLet;
-}
-if (passNumeric === true){
-  lookUplist += numbSym;
-}
-if (passSpeci === true){
-  lookUplist += speciSym;
-}
+  var passNumeric = confirm("Would you like numbers?");
+  var passSpeci = confirm("Would you like special characters?");
+  // += add on the right to the left
+  var lookUplist = "";
+  if (passUpper === true) {
+    lookUplist += upperLet;
+  }
+  if (passLower === true) {
+    lookUplist += lowerLet;
+  }
+  if (passNumeric === true) {
+    lookUplist += numbSym;
+  }
+  if (passSpeci === true) {
+    lookUplist += speciSym;
+  }
 
 
- 
-var password = "";
-for ( i = 0; i < passLength; i++){
-  var randomNum = Math.floor(Math.random() * Math.floor(lookUplist.length));
-  password += lookUplist.charAt(randomNum);
-     
-}
 
-return password;
+  var password = "";
+  for (i = 0; i < passLength; i++) {
+    var randomNum = Math.floor(Math.random() * Math.floor(lookUplist.length));
+    password += lookUplist.charAt(randomNum);
+
+  }
+
+  return password;
 }
