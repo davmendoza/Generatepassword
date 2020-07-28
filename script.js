@@ -15,10 +15,14 @@ var numbSym = "0123456789";
 var speciSym = "!@#$%^&*()_+{}[];:<>,.?/";
 function generatePassword() {
   var passLength = prompt("How long would you like your password to be from 8-128?");
+  if (passLength < 8) {
+    alert('Please choose a number between 8 through 128!!!')
+    }
   var passUpper = confirm("Would you like Uppercase?");
   var passLower = confirm("Would you like Lowercase?");
   var passNumeric = confirm("Would you like numbers?");
   var passSpeci = confirm("Would you like special characters?");
+  
   // += add on the right to the left
   var lookUplist = "";
   if (passUpper === true) {
