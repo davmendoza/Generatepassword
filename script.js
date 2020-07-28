@@ -17,7 +17,8 @@ function generatePassword() {
   var passLength = prompt("How long would you like your password to be from 8-128?");
   if (passLength < 8) {
     alert('Please choose a number between 8 through 128!!!')
-    }
+    return("Try Again")
+  } 
   var passUpper = confirm("Would you like Uppercase?");
   var passLower = confirm("Would you like Lowercase?");
   var passNumeric = confirm("Would you like numbers?");
